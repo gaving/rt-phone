@@ -19,6 +19,17 @@
 		8669A8B51011F7840044333E /* complete.png in Resources */ = {isa = PBXBuildFile; fileRef = 8669A8B41011F7840044333E /* complete.png */; };
 		8669A8C81011F95F0044333E /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 8669A8C71011F95F0044333E /* settings.png */; };
 		8669A8CE1011FA0E0044333E /* SettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8669A8CD1011FA0E0044333E /* SettingsView.xib */; };
+		8669A8DB1011FC010044333E /* Torrent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8669A8DA1011FC010044333E /* Torrent.m */; };
+		8669A933101202CF0044333E /* XMLRPCConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 8669A926101202CF0044333E /* XMLRPCConnection.m */; };
+		8669A934101202CF0044333E /* XMLRPCDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8669A928101202CF0044333E /* XMLRPCDecoder.m */; };
+		8669A935101202CF0044333E /* XMLRPCEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8669A92A101202CF0044333E /* XMLRPCEncoder.m */; };
+		8669A936101202CF0044333E /* XMLRPCExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8669A92C101202CF0044333E /* XMLRPCExtensions.m */; };
+		8669A937101202CF0044333E /* XMLRPCRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8669A92E101202CF0044333E /* XMLRPCRequest.m */; };
+		8669A938101202CF0044333E /* XMLRPCResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8669A930101202CF0044333E /* XMLRPCResponse.m */; };
+		8669A939101202CF0044333E /* XMLValueDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8669A932101202CF0044333E /* XMLValueDecoder.m */; };
+		8669A93C101202EF0044333E /* NSString+XMLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8669A93B101202EF0044333E /* NSString+XMLExtensions.m */; };
+		8669AAA21012119D0044333E /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 8669AAA11012119D0044333E /* Config.m */; };
+		8669AB98101222F10044333E /* torrent.png in Resources */ = {isa = PBXBuildFile; fileRef = 8669AB97101222F10044333E /* torrent.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +49,27 @@
 		8669A8B41011F7840044333E /* complete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = complete.png; sourceTree = "<group>"; };
 		8669A8C71011F95F0044333E /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		8669A8CD1011FA0E0044333E /* SettingsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsView.xib; sourceTree = "<group>"; };
+		8669A8D91011FC010044333E /* Torrent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Torrent.h; sourceTree = "<group>"; };
+		8669A8DA1011FC010044333E /* Torrent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Torrent.m; sourceTree = "<group>"; };
+		8669A925101202CF0044333E /* XMLRPCConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCConnection.h; sourceTree = "<group>"; };
+		8669A926101202CF0044333E /* XMLRPCConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCConnection.m; sourceTree = "<group>"; };
+		8669A927101202CF0044333E /* XMLRPCDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCDecoder.h; sourceTree = "<group>"; };
+		8669A928101202CF0044333E /* XMLRPCDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCDecoder.m; sourceTree = "<group>"; };
+		8669A929101202CF0044333E /* XMLRPCEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCEncoder.h; sourceTree = "<group>"; };
+		8669A92A101202CF0044333E /* XMLRPCEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCEncoder.m; sourceTree = "<group>"; };
+		8669A92B101202CF0044333E /* XMLRPCExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCExtensions.h; sourceTree = "<group>"; };
+		8669A92C101202CF0044333E /* XMLRPCExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCExtensions.m; sourceTree = "<group>"; };
+		8669A92D101202CF0044333E /* XMLRPCRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCRequest.h; sourceTree = "<group>"; };
+		8669A92E101202CF0044333E /* XMLRPCRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCRequest.m; sourceTree = "<group>"; };
+		8669A92F101202CF0044333E /* XMLRPCResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCResponse.h; sourceTree = "<group>"; };
+		8669A930101202CF0044333E /* XMLRPCResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLRPCResponse.m; sourceTree = "<group>"; };
+		8669A931101202CF0044333E /* XMLValueDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLValueDecoder.h; sourceTree = "<group>"; };
+		8669A932101202CF0044333E /* XMLValueDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLValueDecoder.m; sourceTree = "<group>"; };
+		8669A93A101202EF0044333E /* NSString+XMLExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XMLExtensions.h"; sourceTree = "<group>"; };
+		8669A93B101202EF0044333E /* NSString+XMLExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XMLExtensions.m"; sourceTree = "<group>"; };
+		8669AAA01012119D0044333E /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		8669AAA11012119D0044333E /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
+		8669AB97101222F10044333E /* torrent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = torrent.png; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* rt_phone-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "rt_phone-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,10 +90,15 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8669A8E21011FFC30044333E /* XMLRPC */,
 				28216C950DB411BC00E5133A /* FirstViewController.h */,
 				28216C960DB411BC00E5133A /* FirstViewController.m */,
 				1D3623240D0F684500981E51 /* rt_phoneAppDelegate.h */,
 				1D3623250D0F684500981E51 /* rt_phoneAppDelegate.m */,
+				8669A8D91011FC010044333E /* Torrent.h */,
+				8669A8DA1011FC010044333E /* Torrent.m */,
+				8669AAA01012119D0044333E /* Config.h */,
+				8669AAA11012119D0044333E /* Config.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -98,6 +135,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8669AB97101222F10044333E /* torrent.png */,
 				8669A8CD1011FA0E0044333E /* SettingsView.xib */,
 				8669A8C71011F95F0044333E /* settings.png */,
 				8669A8B41011F7840044333E /* complete.png */,
@@ -117,6 +155,29 @@
 				288765070DF74369002DB57D /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8669A8E21011FFC30044333E /* XMLRPC */ = {
+			isa = PBXGroup;
+			children = (
+				8669A93A101202EF0044333E /* NSString+XMLExtensions.h */,
+				8669A93B101202EF0044333E /* NSString+XMLExtensions.m */,
+				8669A925101202CF0044333E /* XMLRPCConnection.h */,
+				8669A926101202CF0044333E /* XMLRPCConnection.m */,
+				8669A927101202CF0044333E /* XMLRPCDecoder.h */,
+				8669A928101202CF0044333E /* XMLRPCDecoder.m */,
+				8669A929101202CF0044333E /* XMLRPCEncoder.h */,
+				8669A92A101202CF0044333E /* XMLRPCEncoder.m */,
+				8669A92B101202CF0044333E /* XMLRPCExtensions.h */,
+				8669A92C101202CF0044333E /* XMLRPCExtensions.m */,
+				8669A92D101202CF0044333E /* XMLRPCRequest.h */,
+				8669A92E101202CF0044333E /* XMLRPCRequest.m */,
+				8669A92F101202CF0044333E /* XMLRPCResponse.h */,
+				8669A930101202CF0044333E /* XMLRPCResponse.m */,
+				8669A931101202CF0044333E /* XMLValueDecoder.h */,
+				8669A932101202CF0044333E /* XMLValueDecoder.m */,
+			);
+			name = XMLRPC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +228,7 @@
 				8669A8B51011F7840044333E /* complete.png in Resources */,
 				8669A8C81011F95F0044333E /* settings.png in Resources */,
 				8669A8CE1011FA0E0044333E /* SettingsView.xib in Resources */,
+				8669AB98101222F10044333E /* torrent.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +242,16 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* rt_phoneAppDelegate.m in Sources */,
 				28216C970DB411BC00E5133A /* FirstViewController.m in Sources */,
+				8669A8DB1011FC010044333E /* Torrent.m in Sources */,
+				8669A933101202CF0044333E /* XMLRPCConnection.m in Sources */,
+				8669A934101202CF0044333E /* XMLRPCDecoder.m in Sources */,
+				8669A935101202CF0044333E /* XMLRPCEncoder.m in Sources */,
+				8669A936101202CF0044333E /* XMLRPCExtensions.m in Sources */,
+				8669A937101202CF0044333E /* XMLRPCRequest.m in Sources */,
+				8669A938101202CF0044333E /* XMLRPCResponse.m in Sources */,
+				8669A939101202CF0044333E /* XMLValueDecoder.m in Sources */,
+				8669A93C101202EF0044333E /* NSString+XMLExtensions.m in Sources */,
+				8669AAA21012119D0044333E /* Config.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
