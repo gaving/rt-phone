@@ -7,41 +7,23 @@
 //
 
 #import "FirstViewController.h"
-
+#import "Config.h"
+#import "Torrent.h"
 
 @implementation FirstViewController
 
-
-/*
-// The designated initializer. Override to perform setup that is required before the view is loaded.
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        // Custom initialization
-    }
-    return self;
-}
-*/
-
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView {
-}
-*/
-
+@synthesize torrents;
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-}
 
+    /* Grab active torrents immediately and store in config */
+    [Torrent loadAll];
 
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    /* Fetch them from the config */
+    torrents = [[Config instance] torrents];
 }
-*/
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -49,33 +31,32 @@
     if(nil == cell) {
         cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:@"recipeCell"] autorelease];
     }
-    if(indexPath.row == 0) {
-        cell.text = @"Cherry Pie";
-    } else if(indexPath.row == 1) {
-        cell.text = @"Cake";
-    } else if(indexPath.row == 2) {
-        cell.text = @"Cookie";
-    }
+
+    cell.text = [(Torrent *)[torrents objectAtIndex:[indexPath row]] filename];
     return cell;
+
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return 3;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [torrents count];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    /* Display more information about the torrent */
 }
 
 - (void)didReceiveMemoryWarning {
-	// Releases the view if it doesn't have a superview.
+    // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-	
-	// Release any cached data, images, etc that aren't in use.
+
+    // Release any cached data, images, etc that aren't in use.
 }
 
 - (void)viewDidUnload {
-	// Release any retained subviews of the main view.
-	// e.g. self.myOutlet = nil;
+    // Release any retained subviews of the main view.
+    // e.g. self.myOutlet = nil;
 }
-
 
 - (void)dealloc {
     [super dealloc];

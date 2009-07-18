@@ -10,6 +10,9 @@
 
 
 @interface FirstViewController : UIViewController <UITableViewDataSource> {
+    NSArray *torrents;
 }
+
+@property (nonatomic, retain) NSArray *torrents;
 
 @end
