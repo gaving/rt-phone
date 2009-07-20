@@ -37,13 +37,20 @@
     NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 
     /* Grab active torrents immediately and store in config */
-    [Torrent loadAll];
+    if ([Torrent loadAll] == YES) {
 
-    /* FIXME: Artifical delay */
-    sleep(2);
+        /* FIXME: Artificial delay */
+        sleep(2);
 
-    /* Fetch them from the config */
-    torrents = [[Config instance] torrents];
+        /* Fetch them from the config */
+        torrents = [[Config instance] torrents];
+    } else {
+
+        /* Show an error as something is up */
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Could not connect" message:@"Cannot connect to the rtorrent RPC service. Please check your configuration settings."  delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alert show];
+        [alert release];
+    }
 
     /* Focus the table now that we have the info */
     [activityIndicator stopAnimating];
@@ -59,11 +66,11 @@
 }
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell *)tableView:(UITableView *)mTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
 
-    TorrentCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    TorrentCell *cell = (TorrentCell *)[mTableView dequeueReusableCellWithIdentifier:CellIdentifier];
 
     if (cell == nil) {
         cell = [[[TorrentCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
@@ -71,8 +78,8 @@
 
     Torrent *torrent = (Torrent *)[torrents objectAtIndex:[indexPath row]];
 
-    NSNumber *bytesDone = [[torrent bytesDone] stringValue];
-    NSNumber *bytesTotal = [[torrent bytesTotal] stringValue];
+    NSString *bytesDone = [[torrent bytesDone] stringValue];
+    NSString *bytesTotal = [[torrent bytesTotal] stringValue];
 
     cell.primaryLabel.text = [torrent filename];
     cell.secondaryLabel.text = [[NSString alloc] initWithFormat:@"%d/%d", bytesDone, bytesTotal];

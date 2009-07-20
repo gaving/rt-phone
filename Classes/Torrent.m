@@ -27,6 +27,11 @@
     /* Make this configurable in the settings page */
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];  
     NSString *rtorrentRPCURL = [userDefaults stringForKey:@"rtorrentRPCURL"];
+
+    if ([rtorrentRPCURL length] == 0) {
+        return nil;
+    }
+
     return [NSURL URLWithString: rtorrentRPCURL];
 }
 
@@ -44,17 +49,32 @@
     return [userInfoResponse object];
 }
 
-+ (void)loadAll {
++ (BOOL)loadAll {
 
     NSLog(@"Fetching the torrent list");
 
+    NSURL *rtorrentRPCURL = [Torrent rtorrentRPCURL];
+
+    if (rtorrentRPCURL == nil) {
+
+        /* No URL has been specified at all */
+        return NO;
+    }
+
     /* Fetch the main download list */
-    XMLRPCRequest *request = [[XMLRPCRequest alloc] initWithHost:[Torrent rtorrentRPCURL]];	
+    XMLRPCRequest *request = [[XMLRPCRequest alloc] initWithHost:rtorrentRPCURL];
+
     [request setUserAgent:@"rt-phone"];
     [request setMethod:@"download_list" withObject:@"main"];
 
     NSObject *response = [Torrent executeXMLRPCRequest:request];
     [request release];  
+
+    if ([response isKindOfClass:[NSError class]]) {
+
+        /* Not received a suitable response, return early */
+        return NO;
+    }
 
     NSMutableArray *torrents = [[[NSMutableArray alloc] init] autorelease]; 
     NSArray* hashArray = (NSArray *)response;
@@ -77,6 +97,8 @@
 
     /* Set these torrents in the config */
     [[Config instance] setTorrents:torrents];
+
+    return YES;
 }
 
 

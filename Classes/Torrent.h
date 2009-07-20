@@ -28,6 +28,6 @@
 + (NSURL *) rtorrentRPCURL;
 + (id) fetchInfo:(NSString *)methodName param:(NSString *)param;
 + (id) executeXMLRPCRequest:(XMLRPCRequest *)req;
-+ (void) loadAll;
++ (BOOL) loadAll;
 
 @end

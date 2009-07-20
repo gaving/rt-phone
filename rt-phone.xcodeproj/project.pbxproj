@@ -149,13 +149,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				86018E581013E947006A4124 /* refresh.png */,
-				86018D811013DCB0006A4124 /* Mime Types */,
-				8669AB97101222F10044333E /* torrent.png */,
+				867BA7D71014681B006A050D /* Icons */,
 				8669A8CD1011FA0E0044333E /* SettingsView.xib */,
-				8669A8C71011F95F0044333E /* settings.png */,
-				8669A8B41011F7840044333E /* seeding.png */,
-				8669A8B21011F7050044333E /* leeching.png */,
 				282CCBFD0DB6C98000C4EA27 /* SecondView.xib */,
 				28AD73870D9D96C1002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* rt_phone-Info.plist */,
@@ -203,6 +198,19 @@
 				8669A932101202CF0044333E /* XMLValueDecoder.m */,
 			);
 			name = XMLRPC;
+			sourceTree = "<group>";
+		};
+		867BA7D71014681B006A050D /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				86018E581013E947006A4124 /* refresh.png */,
+				8669AB97101222F10044333E /* torrent.png */,
+				8669A8C71011F95F0044333E /* settings.png */,
+				8669A8B41011F7840044333E /* seeding.png */,
+				8669A8B21011F7050044333E /* leeching.png */,
+				86018D811013DCB0006A4124 /* Mime Types */,
+			);
+			name = Icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
