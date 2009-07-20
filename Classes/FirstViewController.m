@@ -9,32 +9,76 @@
 #import "FirstViewController.h"
 #import "Config.h"
 #import "Torrent.h"
+#import "TorrentCell.h"
 
 @implementation FirstViewController
 
 @synthesize torrents;
+@synthesize refreshButton;
+@synthesize activityIndicator;
+@synthesize tableView;
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [self refreshTorrents];
+}
+
+- (void)refreshTorrents {
+    self.activityIndicator.hidden = NO;
+    [activityIndicator startAnimating];
+
+    [NSThread detachNewThreadSelector: @selector(loadTorrents) toTarget:self withObject:nil];
+}
+
+- (void)loadTorrents {
+
+    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+
     /* Grab active torrents immediately and store in config */
     [Torrent loadAll];
 
+    /* FIXME: Artifical delay */
+    sleep(2);
+
     /* Fetch them from the config */
     torrents = [[Config instance] torrents];
+
+    /* Focus the table now that we have the info */
+    [activityIndicator stopAnimating];
+    [tableView reloadData];
+
+    self.activityIndicator.hidden = YES;
+
+    [pool release];
 }
+
+- (IBAction) doRefreshButton {
+    [self refreshTorrents];
+}
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"recipeCell"];
-    if(nil == cell) {
-        cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:@"recipeCell"] autorelease];
+    static NSString *CellIdentifier = @"Cell";
+
+    TorrentCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+
+    if (cell == nil) {
+        cell = [[[TorrentCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
     }
 
-    cell.text = [(Torrent *)[torrents objectAtIndex:[indexPath row]] filename];
-    return cell;
+    Torrent *torrent = (Torrent *)[torrents objectAtIndex:[indexPath row]];
 
+    NSNumber *bytesDone = [[torrent bytesDone] stringValue];
+    NSNumber *bytesTotal = [[torrent bytesTotal] stringValue];
+
+    cell.primaryLabel.text = [torrent filename];
+    cell.secondaryLabel.text = [[NSString alloc] initWithFormat:@"%d/%d", bytesDone, bytesTotal];
+    cell.myImageView.image = [UIImage imageNamed:@"image-x-generic.png"];
+
+    return cell;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

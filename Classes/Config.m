@@ -13,12 +13,10 @@
 @synthesize torrents;
 
 // Make model a singleton
-+ (Config *)instance
-{
++ (Config *)instance {
     static Config *gInstance = NULL;
 
-    @synchronized(self)
-    {
+    @synchronized(self) {
         if (gInstance == NULL)
             gInstance = [[self alloc] init];
     }

@@ -19,12 +19,15 @@
 @synthesize uri;
 @synthesize hash;
 @synthesize filename;
-@synthesize owner;
+@synthesize bytesDone;
+@synthesize bytesTotal;
 
 + (NSURL *)rtorrentRPCURL {
 
     /* Make this configurable in the settings page */
-    return [NSURL URLWithString: @"http://192.168.1.100:90/RPC2"];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];  
+    NSString *rtorrentRPCURL = [userDefaults stringForKey:@"rtorrentRPCURL"];
+    return [NSURL URLWithString: rtorrentRPCURL];
 }
 
 +  (id)fetchInfo:(NSString *)methodName param:(NSString *)param {
@@ -59,13 +62,16 @@
     /* Loop through the torrents and get more info about them */
     for (NSString *hash in hashArray) {
 
-        /* Name of the torrent */
+        /* Extended information about the torrent */
         NSString *name = [self fetchInfo:@"d.get_name" param:hash];
+        NSNumber *bytesDone = [self fetchInfo:@"d.get_completed_bytes" param:hash];
+        NSNumber *bytesTotal = [self fetchInfo:@"d.get_size_bytes" param:hash];
 
         Torrent *tempTorrent = [[[Torrent alloc] init] autorelease];
         [tempTorrent setHash:hash];
         [tempTorrent setFilename:name];
-        [tempTorrent setOwner:@"Gavin"];
+        [tempTorrent setBytesDone:bytesDone];
+        [tempTorrent setBytesTotal:bytesTotal];
         [torrents addObject:tempTorrent];
     }
 
@@ -79,7 +85,6 @@
     [hash release];
     [filename release];
     [uri release];
-    [owner release];
     [super dealloc];
 }
 

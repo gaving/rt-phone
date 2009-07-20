@@ -11,17 +11,19 @@
 
 @interface Torrent : NSObject {
     NSString *name;
-    NSString *owner;
     NSString *hash;
     NSString *uri;
     NSString *filename;
+    NSNumber *bytesDone;
+    NSNumber *bytesTotal;
 }
 
 @property (nonatomic, retain) NSString *name;
-@property (nonatomic, retain) NSString *owner;
 @property (nonatomic, retain) NSString *uri;
 @property (nonatomic, retain) NSString *hash;
 @property (nonatomic, retain) NSString *filename;
+@property (nonatomic, retain) NSNumber *bytesDone;
+@property (nonatomic, retain) NSNumber *bytesTotal;
 
 + (NSURL *) rtorrentRPCURL;
 + (id) fetchInfo:(NSString *)methodName param:(NSString *)param;
