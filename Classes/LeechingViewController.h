@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  LeecingViewController.h
 //  rt-phone
 //
 //  Created by Gavin Gilmour on 13/07/2009.
@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-
-@interface FirstViewController : UIViewController <UITableViewDataSource> {
+@interface LeechingViewController : UIViewController <UITableViewDataSource> {
     NSArray *torrents;
     UIBarButtonItem *refreshButton;
     UIActivityIndicatorView *activityIndicator;

@@ -1,27 +1,25 @@
 //
-//  FirstViewController.m
+//  LeecingViewController.m
 //  rt-phone
 //
 //  Created by Gavin Gilmour on 13/07/2009.
 //  Copyright __MyCompanyName__ 2009. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "LeechingViewController.h"
 #import "Config.h"
 #import "Torrent.h"
 #import "TorrentCell.h"
 
-@implementation FirstViewController
+@implementation LeechingViewController
 
 @synthesize torrents;
 @synthesize refreshButton;
 @synthesize activityIndicator;
 @synthesize tableView;
 
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     [self refreshTorrents];
 }
 
@@ -95,6 +93,17 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
     /* Display more information about the torrent */
+    // TorrentViewController *torrentViewController = [[[TorrentViewController alloc] initWithNibName:@"RepoCommitsView" bu
+                                                                                                          // ndle:nil] autorelease];
+    // Torrent *torrent = [repositories objectAtIndex:[indexPath row]];
+
+    // [torrentViewController.torrent release];
+    // // [torrent.commits release];
+    // // [torrent loadCommits];
+    // torrentViewController.torrent = torrent;
+
+    // [self.navigationController pushViewController:torrentViewController animated:YES];
+    // [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
