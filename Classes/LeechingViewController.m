@@ -7,6 +7,7 @@
 //
 
 #import "LeechingViewController.h"
+#import "TorrentViewController.h"
 #import "Config.h"
 #import "Torrent.h"
 #import "TorrentCell.h"
@@ -20,11 +21,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    /* Grab the leeching torrents */
     [self refreshTorrents];
 }
 
 - (void)refreshTorrents {
-    self.activityIndicator.hidden = NO;
+
+    /* Create a new activity item top right */
+    activityIndicator = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+    UIBarButtonItem *activityItem = [[UIBarButtonItem alloc] initWithCustomView:activityIndicator];
+    [activityIndicator release];
+
+    self.navigationItem.rightBarButtonItem = activityItem;
+
+    [activityItem release];
     [activityIndicator startAnimating];
 
     [NSThread detachNewThreadSelector: @selector(loadTorrents) toTarget:self withObject:nil];
@@ -54,8 +65,6 @@
     [activityIndicator stopAnimating];
     [tableView reloadData];
 
-    self.activityIndicator.hidden = YES;
-
     [pool release];
 }
 
@@ -63,9 +72,7 @@
     [self refreshTorrents];
 }
 
-
-- (UITableViewCell *)tableView:(UITableView *)mTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)mTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"Cell";
 
     TorrentCell *cell = (TorrentCell *)[mTableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -75,12 +82,11 @@
     }
 
     Torrent *torrent = (Torrent *)[torrents objectAtIndex:[indexPath row]];
-
-    NSString *bytesDone = [[torrent bytesDone] stringValue];
-    NSString *bytesTotal = [[torrent bytesTotal] stringValue];
+    NSString *bytesDone = [Torrent stringFromFileSize:[[torrent bytesDone] intValue]];
+    NSString *bytesTotal = [Torrent stringFromFileSize:[[torrent bytesTotal] intValue]];
 
     cell.primaryLabel.text = [torrent filename];
-    cell.secondaryLabel.text = [[NSString alloc] initWithFormat:@"%d/%d", bytesDone, bytesTotal];
+    cell.secondaryLabel.text = [NSString stringWithFormat:@"%@/%@", bytesDone, bytesTotal];
     cell.myImageView.image = [UIImage imageNamed:@"image-x-generic.png"];
 
     return cell;
@@ -90,32 +96,24 @@
     return [torrents count];
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)mTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
     /* Display more information about the torrent */
-    // TorrentViewController *torrentViewController = [[[TorrentViewController alloc] initWithNibName:@"RepoCommitsView" bu
-                                                                                                          // ndle:nil] autorelease];
-    // Torrent *torrent = [repositories objectAtIndex:[indexPath row]];
+    TorrentViewController *torrentViewController = [[[TorrentViewController alloc] initWithNibName:@"TorrentView" bundle:nil] autorelease];
+    Torrent *torrent = (Torrent *)[torrents objectAtIndex:[indexPath row]];
 
-    // [torrentViewController.torrent release];
-    // // [torrent.commits release];
-    // // [torrent loadCommits];
-    // torrentViewController.torrent = torrent;
+    [torrentViewController.torrent release];
+    torrentViewController.torrent = torrent;
 
-    // [self.navigationController pushViewController:torrentViewController animated:YES];
-    // [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self.navigationController pushViewController:torrentViewController animated:YES];
+    [mTableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
-    // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-
-    // Release any cached data, images, etc that aren't in use.
 }
 
 - (void)viewDidUnload {
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (void)dealloc {

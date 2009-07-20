@@ -12,7 +12,6 @@
 
 @synthesize torrents;
 
-// Make model a singleton
 + (Config *)instance {
     static Config *gInstance = NULL;
 
@@ -24,7 +23,7 @@
 }
 
 - (void) dealloc {
-    [torrents     release];
+    [torrents release];
     [super dealloc];
 }
 

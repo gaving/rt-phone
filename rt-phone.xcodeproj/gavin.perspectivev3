@@ -271,7 +271,6 @@
 								<string>29B97315FDCFA39411CA2CEA</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
 								<string>867BA7D71014681B006A050D</string>
-								<string>86018D601013D603006A4124</string>
 								<string>1C37FBAC04509CD000000102</string>
 								<string>1C37FAAC04509CD000000102</string>
 								<string>1C37FABC05509CD000000102</string>
@@ -284,12 +283,12 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>51</integer>
-									<integer>42</integer>
+									<integer>1</integer>
+									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {185, 920}}</string>
+							<string>{{0, 253}, {185, 920}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -322,7 +321,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>86A1C9E7100BC1A400A2AB21</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Torrent.m</string>
+								<string>LeechingViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -330,7 +329,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>86A1C9E8100BC1A400A2AB21</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Torrent.m</string>
+										<string>LeechingViewController.m</string>
+										<key>_historyCapacity</key>
+										<integer>0</integer>
+										<key>bookmark</key>
+										<string>86C9234C1014CA5C0017921A</string>
 										<key>history</key>
 										<array>
 											<string>8669A946101205650044333E</string>
@@ -345,6 +348,10 @@
 											<string>867BA7E310146BB7006A050D</string>
 											<string>867BA8351014723F006A050D</string>
 											<string>867BA8381014723F006A050D</string>
+											<string>8621F54310148A88000E6BC0</string>
+											<string>8621F54410148A88000E6BC0</string>
+											<string>8621F54510148A88000E6BC0</string>
+											<string>86C9233D1014C54A0017921A</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -360,6 +367,10 @@
 											<string>867BA7E510146BB7006A050D</string>
 											<string>867BA7E610146BB7006A050D</string>
 											<string>867BA7E710146BB7006A050D</string>
+											<string>8621F4EC10147E34000E6BC0</string>
+											<string>8621F51410148821000E6BC0</string>
+											<string>8621F54810148A88000E6BC0</string>
+											<string>8621F54A10148A88000E6BC0</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -484,11 +495,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>8621F4CE101472AC000E6BC0</string>
+				<string>86C922281014958E0017921A</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>8621F4CF101472AC000E6BC0</string>
+				<string>86C922291014958E0017921A</string>
 				<string>86A1C9E7100BC1A400A2AB21</string>
-				<string>8621F4D0101472AC000E6BC0</string>
+				<string>86C9222A1014958E0017921A</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -537,12 +548,12 @@
 					<key>GeometryConfiguration</key>
 					<dict>
 						<key>Frame</key>
-						<string>{{0, 0}, {1200, 546}}</string>
+						<string>{{0, 0}, {1200, 383}}</string>
 					</dict>
 					<key>Module</key>
 					<string>PBXDebugCLIModule</string>
 					<key>Proportion</key>
-					<string>546pt</string>
+					<string>383pt</string>
 				</dict>
 				<dict>
 					<key>ContentConfiguration</key>
@@ -561,8 +572,8 @@
 								<string>yes</string>
 								<key>sizes</key>
 								<array>
-									<string>{{0, 0}, {585, 188}}</string>
-									<string>{{585, 0}, {615, 188}}</string>
+									<string>{{0, 0}, {585, 267}}</string>
+									<string>{{585, 0}, {615, 267}}</string>
 								</array>
 							</dict>
 							<key>VerticalSplitView</key>
@@ -577,8 +588,8 @@
 								<string>yes</string>
 								<key>sizes</key>
 								<array>
-									<string>{{0, 0}, {1200, 188}}</string>
-									<string>{{0, 188}, {1200, 199}}</string>
+									<string>{{0, 0}, {1200, 267}}</string>
+									<string>{{0, 267}, {1200, 283}}</string>
 								</array>
 							</dict>
 						</dict>
@@ -598,7 +609,7 @@
 						<key>DebugSTDIOWindowFrame</key>
 						<string>{{200, 200}, {500, 300}}</string>
 						<key>Frame</key>
-						<string>{{0, 551}, {1200, 387}}</string>
+						<string>{{0, 388}, {1200, 550}}</string>
 						<key>PBXDebugSessionStackFrameViewKey</key>
 						<dict>
 							<key>DebugVariablesTableConfiguration</key>
@@ -611,13 +622,13 @@
 								<real>385</real>
 							</array>
 							<key>Frame</key>
-							<string>{{585, 0}, {615, 188}}</string>
+							<string>{{585, 0}, {615, 267}}</string>
 						</dict>
 					</dict>
 					<key>Module</key>
 					<string>PBXDebugSessionModule</string>
 					<key>Proportion</key>
-					<string>387pt</string>
+					<string>550pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -635,14 +646,14 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>8621F4D1101472AC000E6BC0</string>
+				<string>86C922301014B20E0017921A</string>
 				<string>1CCC7628064C1048000F2A68</string>
 				<string>1CCC7629064C1048000F2A68</string>
-				<string>8621F4D2101472AC000E6BC0</string>
-				<string>8621F4D3101472AC000E6BC0</string>
-				<string>8621F4D4101472AC000E6BC0</string>
-				<string>8621F4D5101472AC000E6BC0</string>
-				<string>8621F4D6101472AC000E6BC0</string>
+				<string>86C922311014B20E0017921A</string>
+				<string>86C922321014B20E0017921A</string>
+				<string>86C922331014B20E0017921A</string>
+				<string>86C922341014B20E0017921A</string>
+				<string>86C922351014B20E0017921A</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -672,6 +683,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>86C922431014B5A40017921A</string>
+		<string>86C922441014B5A40017921A</string>
 		<string>/Users/gavin/Coding/rt-phone/rt-phone.xcodeproj</string>
 	</array>
 	<key>WindowString</key>

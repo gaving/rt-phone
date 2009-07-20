@@ -8,7 +8,6 @@
 
 #import "TorrentCell.h"
 
-
 @implementation TorrentCell
 
 @synthesize primaryLabel,secondaryLabel,myImageView;
@@ -58,6 +57,7 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+    // NSLog(@"what the hell");
 }
 
 

@@ -12,7 +12,7 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		28216C970DB411BC00E5133A /* LeechingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28216C960DB411BC00E5133A /* LeechingViewController.m */; };
-		282CCBFE0DB6C98000C4EA27 /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 282CCBFD0DB6C98000C4EA27 /* SecondView.xib */; };
+		282CCBFE0DB6C98000C4EA27 /* SeedingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 282CCBFD0DB6C98000C4EA27 /* SeedingView.xib */; };
 		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
 		28AD73880D9D96C1002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD73870D9D96C1002E5188 /* MainWindow.xib */; };
 		86018D611013D603006A4124 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 86018D601013D603006A4124 /* Settings.bundle */; };
@@ -20,6 +20,8 @@
 		86018D861013DD1B006A4124 /* text-x-generic.png in Resources */ = {isa = PBXBuildFile; fileRef = 86018D851013DD1B006A4124 /* text-x-generic.png */; };
 		86018D8D1013DDE9006A4124 /* image-x-generic.png in Resources */ = {isa = PBXBuildFile; fileRef = 86018D8C1013DDE9006A4124 /* image-x-generic.png */; };
 		86018E591013E947006A4124 /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 86018E581013E947006A4124 /* refresh.png */; };
+		8621F4E410147D32000E6BC0 /* TorrentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8621F4E310147D32000E6BC0 /* TorrentViewController.m */; };
+		8621F51B10148856000E6BC0 /* TorrentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8621F51A10148856000E6BC0 /* TorrentView.xib */; };
 		8669A8B31011F7050044333E /* leeching.png in Resources */ = {isa = PBXBuildFile; fileRef = 8669A8B21011F7050044333E /* leeching.png */; };
 		8669A8B51011F7840044333E /* seeding.png in Resources */ = {isa = PBXBuildFile; fileRef = 8669A8B41011F7840044333E /* seeding.png */; };
 		8669A8C81011F95F0044333E /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 8669A8C71011F95F0044333E /* settings.png */; };
@@ -45,7 +47,7 @@
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		28216C950DB411BC00E5133A /* LeechingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeechingViewController.h; sourceTree = "<group>"; };
 		28216C960DB411BC00E5133A /* LeechingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeechingViewController.m; sourceTree = "<group>"; };
-		282CCBFD0DB6C98000C4EA27 /* SecondView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondView.xib; sourceTree = "<group>"; };
+		282CCBFD0DB6C98000C4EA27 /* SeedingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeedingView.xib; sourceTree = "<group>"; };
 		288765070DF74369002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		28A0AB4B0D9B1048005BE974 /* rt_phone_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rt_phone_Prefix.pch; sourceTree = "<group>"; };
 		28AD73870D9D96C1002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
@@ -56,6 +58,9 @@
 		86018D851013DD1B006A4124 /* text-x-generic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "text-x-generic.png"; sourceTree = "<group>"; };
 		86018D8C1013DDE9006A4124 /* image-x-generic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image-x-generic.png"; sourceTree = "<group>"; };
 		86018E581013E947006A4124 /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
+		8621F4E210147D32000E6BC0 /* TorrentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorrentViewController.h; sourceTree = "<group>"; };
+		8621F4E310147D32000E6BC0 /* TorrentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorrentViewController.m; sourceTree = "<group>"; };
+		8621F51A10148856000E6BC0 /* TorrentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TorrentView.xib; sourceTree = "<group>"; };
 		8669A8B21011F7050044333E /* leeching.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leeching.png; sourceTree = "<group>"; };
 		8669A8B41011F7840044333E /* seeding.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seeding.png; sourceTree = "<group>"; };
 		8669A8C71011F95F0044333E /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
@@ -112,6 +117,8 @@
 				8669AAA11012119D0044333E /* Config.m */,
 				86018D771013DADB006A4124 /* TorrentCell.h */,
 				86018D781013DADB006A4124 /* TorrentCell.m */,
+				8621F4E210147D32000E6BC0 /* TorrentViewController.h */,
+				8621F4E310147D32000E6BC0 /* TorrentViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -151,7 +158,8 @@
 			children = (
 				867BA7D71014681B006A050D /* Icons */,
 				8669A8CD1011FA0E0044333E /* SettingsView.xib */,
-				282CCBFD0DB6C98000C4EA27 /* SecondView.xib */,
+				282CCBFD0DB6C98000C4EA27 /* SeedingView.xib */,
+				8621F51A10148856000E6BC0 /* TorrentView.xib */,
 				28AD73870D9D96C1002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* rt_phone-Info.plist */,
 			);
@@ -256,7 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28AD73880D9D96C1002E5188 /* MainWindow.xib in Resources */,
-				282CCBFE0DB6C98000C4EA27 /* SecondView.xib in Resources */,
+				282CCBFE0DB6C98000C4EA27 /* SeedingView.xib in Resources */,
 				8669A8B31011F7050044333E /* leeching.png in Resources */,
 				8669A8B51011F7840044333E /* seeding.png in Resources */,
 				8669A8C81011F95F0044333E /* settings.png in Resources */,
@@ -266,6 +274,7 @@
 				86018D861013DD1B006A4124 /* text-x-generic.png in Resources */,
 				86018D8D1013DDE9006A4124 /* image-x-generic.png in Resources */,
 				86018E591013E947006A4124 /* refresh.png in Resources */,
+				8621F51B10148856000E6BC0 /* TorrentView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +299,7 @@
 				8669A93C101202EF0044333E /* NSString+XMLExtensions.m in Sources */,
 				8669AAA21012119D0044333E /* Config.m in Sources */,
 				86018D791013DADB006A4124 /* TorrentCell.m in Sources */,
+				8621F4E410147D32000E6BC0 /* TorrentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

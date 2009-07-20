@@ -25,6 +25,7 @@
 @property (nonatomic, retain) NSNumber *bytesDone;
 @property (nonatomic, retain) NSNumber *bytesTotal;
 
++ (NSString *)stringFromFileSize:(int)theSize;
 + (NSURL *) rtorrentRPCURL;
 + (id) fetchInfo:(NSString *)methodName param:(NSString *)param;
 + (id) executeXMLRPCRequest:(XMLRPCRequest *)req;

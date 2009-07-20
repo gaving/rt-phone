@@ -49,6 +49,21 @@
     return [userInfoResponse object];
 }
 
++ (NSString *)stringFromFileSize:(int)theSize {
+    float floatSize = theSize;
+    if (theSize<1023)
+        return([NSString stringWithFormat:@"%i bytes",theSize]);
+    floatSize = floatSize / 1024;
+    if (floatSize<1023)
+        return([NSString stringWithFormat:@"%1.1f KB",floatSize]);
+    floatSize = floatSize / 1024;
+    if (floatSize<1023)
+        return([NSString stringWithFormat:@"%1.1f MB",floatSize]);
+    floatSize = floatSize / 1024;
+
+    return([NSString stringWithFormat:@"%1.1f GB",floatSize]);
+}
+
 + (BOOL)loadAll {
 
     NSLog(@"Fetching the torrent list");

@@ -8,7 +8,7 @@
 		<string key="IBDocument.HIToolboxVersion">353.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="106"/>
+			<integer value="108"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -50,88 +50,67 @@
 				<string key="IBUITitle">rt-phone</string>
 				<object class="IBUISimulatedTabBarMetrics" key="IBUISimulatedBottomBarMetrics"/>
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
+				<object class="IBUINavigationController" key="IBUISelectedViewController" id="510893491">
+					<object class="IBUITabBarItem" key="IBUITabBarItem" id="765670903">
+						<string key="IBUITitle">Leeching</string>
+						<object class="NSCustomResource" key="IBUIImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">leeching.png</string>
+						</object>
+						<reference key="IBUITabBar"/>
+					</object>
+					<reference key="IBUIParentViewController" ref="1034742383"/>
+					<object class="IBUISimulatedTabBarMetrics" key="IBUISimulatedBottomBarMetrics"/>
+					<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
+					<object class="IBUINavigationBar" key="IBUINavigationBar" id="880231061">
+						<nil key="NSNextResponder"/>
+						<int key="NSvFlags">256</int>
+						<string key="NSFrameSize">{0, 0}</string>
+						<bool key="IBUIOpaque">NO</bool>
+						<bool key="IBUIClipsSubviews">YES</bool>
+						<bool key="IBUIMultipleTouchEnabled">YES</bool>
+					</object>
+					<object class="NSMutableArray" key="IBUIViewControllers">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="IBUIViewController" id="1024858337">
+							<string key="IBUITitle">Leeching</string>
+							<object class="IBUITableView" key="IBUIView" id="1052359282">
+								<reference key="NSNextResponder"/>
+								<int key="NSvFlags">274</int>
+								<string key="NSFrame">{{0, -2}, {320, 371}}</string>
+								<reference key="NSSuperview"/>
+								<object class="NSColor" key="IBUIBackgroundColor">
+									<int key="NSColorSpace">3</int>
+									<bytes key="NSWhite">MQA</bytes>
+								</object>
+								<bool key="IBUIOpaque">NO</bool>
+								<bool key="IBUIClipsSubviews">YES</bool>
+								<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
+								<bool key="IBUIBouncesZoom">NO</bool>
+								<int key="IBUISeparatorStyle">1</int>
+								<int key="IBUISectionIndexMinimumDisplayRowCount">0</int>
+								<bool key="IBUIShowsSelectionImmediatelyOnTouchBegin">YES</bool>
+								<float key="IBUIRowHeight">4.400000e+01</float>
+								<float key="IBUISectionHeaderHeight">2.200000e+01</float>
+								<float key="IBUISectionFooterHeight">2.200000e+01</float>
+							</object>
+							<object class="IBUINavigationItem" key="IBUINavigationItem" id="385719683">
+								<reference key="IBUINavigationBar"/>
+								<string key="IBUITitle">Leeching</string>
+								<object class="IBUIBarButtonItem" key="IBUILeftBarButtonItem" id="598754413">
+									<int key="IBUIStyle">1</int>
+									<int key="IBUISystemItemIdentifier">13</int>
+								</object>
+							</object>
+							<reference key="IBUIParentViewController" ref="510893491"/>
+						</object>
+					</object>
+				</object>
 				<object class="NSMutableArray" key="IBUIViewControllers">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<object class="IBUIViewController" id="1024858337">
-						<string key="IBUITitle">Incomplete</string>
-						<object class="IBUIView" key="IBUIView" id="434903890">
-							<nil key="NSNextResponder"/>
-							<int key="NSvFlags">274</int>
-							<object class="NSMutableArray" key="NSSubviews">
-								<bool key="EncodedWithXMLCoder">YES</bool>
-								<object class="IBUITableView" id="1052359282">
-									<reference key="NSNextResponder" ref="434903890"/>
-									<int key="NSvFlags">274</int>
-									<string key="NSFrame">{{0, 44}, {320, 411}}</string>
-									<reference key="NSSuperview" ref="434903890"/>
-									<object class="NSColor" key="IBUIBackgroundColor">
-										<int key="NSColorSpace">3</int>
-										<bytes key="NSWhite">MQA</bytes>
-									</object>
-									<bool key="IBUIOpaque">NO</bool>
-									<bool key="IBUIClipsSubviews">YES</bool>
-									<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
-									<bool key="IBUIBouncesZoom">NO</bool>
-									<int key="IBUISeparatorStyle">1</int>
-									<int key="IBUISectionIndexMinimumDisplayRowCount">0</int>
-									<bool key="IBUIShowsSelectionImmediatelyOnTouchBegin">YES</bool>
-									<float key="IBUIRowHeight">4.400000e+01</float>
-									<float key="IBUISectionHeaderHeight">2.200000e+01</float>
-									<float key="IBUISectionFooterHeight">2.200000e+01</float>
-								</object>
-								<object class="IBUINavigationBar" id="266662730">
-									<reference key="NSNextResponder" ref="434903890"/>
-									<int key="NSvFlags">290</int>
-									<string key="NSFrameSize">{320, 44}</string>
-									<reference key="NSSuperview" ref="434903890"/>
-									<bool key="IBUIOpaque">NO</bool>
-									<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
-									<object class="NSArray" key="IBUIItems">
-										<bool key="EncodedWithXMLCoder">YES</bool>
-										<object class="IBUINavigationItem" id="989108280">
-											<reference key="IBUINavigationBar" ref="266662730"/>
-											<string key="IBUITitle">Leeching</string>
-											<object class="IBUIBarButtonItem" key="IBUILeftBarButtonItem" id="966570864">
-												<int key="IBUIStyle">1</int>
-												<int key="IBUISystemItemIdentifier">13</int>
-											</object>
-										</object>
-									</object>
-								</object>
-								<object class="IBUIActivityIndicatorView" id="525635819">
-									<reference key="NSNextResponder" ref="434903890"/>
-									<int key="NSvFlags">292</int>
-									<string key="NSFrame">{{280, 12}, {20, 20}}</string>
-									<reference key="NSSuperview" ref="434903890"/>
-									<bool key="IBUIOpaque">NO</bool>
-									<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
-									<bool key="IBUIUserInteractionEnabled">NO</bool>
-									<bool key="IBUIHidesWhenStopped">NO</bool>
-									<int key="IBUIStyle">2</int>
-								</object>
-							</object>
-							<string key="NSFrameSize">{320, 411}</string>
-							<object class="NSColor" key="IBUIBackgroundColor">
-								<int key="NSColorSpace">3</int>
-								<bytes key="NSWhite">MQA</bytes>
-								<object class="NSColorSpace" key="NSCustomColorSpace">
-									<int key="NSID">2</int>
-								</object>
-							</object>
-							<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
-						</object>
-						<object class="IBUITabBarItem" key="IBUITabBarItem" id="765670903">
-							<string key="IBUITitle">Leeching</string>
-							<object class="NSCustomResource" key="IBUIImage">
-								<string key="NSClassName">NSImage</string>
-								<string key="NSResourceName">leeching.png</string>
-							</object>
-							<reference key="IBUITabBar"/>
-						</object>
-						<reference key="IBUIParentViewController" ref="1034742383"/>
-					</object>
+					<reference ref="510893491"/>
 					<object class="IBUIViewController" id="268481961">
-						<string key="IBUITitle">Complete</string>
+						<string key="IBUITitle">Seeding</string>
 						<object class="IBUITabBarItem" key="IBUITabBarItem" id="807309489">
 							<string key="IBUITitle">Seeding</string>
 							<object class="NSCustomResource" key="IBUIImage">
@@ -141,7 +120,7 @@
 							<reference key="IBUITabBar"/>
 						</object>
 						<reference key="IBUIParentViewController" ref="1034742383"/>
-						<string key="IBUINibName">SecondView</string>
+						<string key="IBUINibName">SeedingView</string>
 					</object>
 					<object class="IBUIViewController" id="668414589">
 						<string key="IBUITitle">Settings</string>
@@ -217,27 +196,27 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">delegate</string>
+						<reference key="source" ref="1052359282"/>
+						<reference key="destination" ref="1024858337"/>
+					</object>
+					<int key="connectionID">163</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">refreshButton</string>
 						<reference key="source" ref="1024858337"/>
-						<reference key="destination" ref="966570864"/>
+						<reference key="destination" ref="598754413"/>
 					</object>
-					<int key="connectionID">143</int>
+					<int key="connectionID">188</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">doRefreshButton</string>
-						<reference key="source" ref="966570864"/>
+						<reference key="source" ref="598754413"/>
 						<reference key="destination" ref="1024858337"/>
 					</object>
-					<int key="connectionID">144</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">activityIndicator</string>
-						<reference key="source" ref="1024858337"/>
-						<reference key="destination" ref="525635819"/>
-					</object>
-					<int key="connectionID">147</int>
+					<int key="connectionID">192</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -276,25 +255,15 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="795333663"/>
-							<reference ref="268481961"/>
-							<reference ref="1024858337"/>
 							<reference ref="668414589"/>
+							<reference ref="510893491"/>
+							<reference ref="268481961"/>
 						</object>
 						<reference key="parent" ref="212423101"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">107</int>
 						<reference key="object" ref="795333663"/>
-						<reference key="parent" ref="1034742383"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">108</int>
-						<reference key="object" ref="1024858337"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="765670903"/>
-							<reference ref="434903890"/>
-						</object>
 						<reference key="parent" ref="1034742383"/>
 					</object>
 					<object class="IBObjectRecord">
@@ -312,33 +281,35 @@
 						<reference key="parent" ref="268481961"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">111</int>
-						<reference key="object" ref="765670903"/>
-						<reference key="parent" ref="1024858337"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">-2</int>
 						<reference key="object" ref="532797962"/>
 						<reference key="parent" ref="212423101"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">119</int>
-						<reference key="object" ref="434903890"/>
+						<int key="objectID">178</int>
+						<reference key="object" ref="510893491"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="266662730"/>
-							<reference ref="525635819"/>
-							<reference ref="1052359282"/>
+							<reference ref="880231061"/>
+							<reference ref="1024858337"/>
+							<reference ref="765670903"/>
 						</object>
-						<reference key="parent" ref="1024858337"/>
+						<reference key="parent" ref="1034742383"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">124</int>
-						<reference key="object" ref="1052359282"/>
+						<int key="objectID">180</int>
+						<reference key="object" ref="880231061"/>
+						<reference key="parent" ref="510893491"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">108</int>
+						<reference key="object" ref="1024858337"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="385719683"/>
+							<reference ref="1052359282"/>
 						</object>
-						<reference key="parent" ref="434903890"/>
+						<reference key="parent" ref="510893491"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">128</int>
@@ -355,32 +326,28 @@
 						<reference key="parent" ref="668414589"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">130</int>
-						<reference key="object" ref="266662730"/>
+						<int key="objectID">111</int>
+						<reference key="object" ref="765670903"/>
+						<reference key="parent" ref="510893491"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">183</int>
+						<reference key="object" ref="385719683"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="989108280"/>
+							<reference ref="598754413"/>
 						</object>
-						<reference key="parent" ref="434903890"/>
+						<reference key="parent" ref="1024858337"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">131</int>
-						<reference key="object" ref="989108280"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="966570864"/>
-						</object>
-						<reference key="parent" ref="266662730"/>
+						<int key="objectID">186</int>
+						<reference key="object" ref="598754413"/>
+						<reference key="parent" ref="385719683"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">140</int>
-						<reference key="object" ref="966570864"/>
-						<reference key="parent" ref="989108280"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">146</int>
-						<reference key="object" ref="525635819"/>
-						<reference key="parent" ref="434903890"/>
+						<int key="objectID">124</int>
+						<reference key="object" ref="1052359282"/>
+						<reference key="parent" ref="1024858337"/>
 					</object>
 				</object>
 			</object>
@@ -398,12 +365,10 @@
 					<string>109.IBPluginDependency</string>
 					<string>110.IBPluginDependency</string>
 					<string>111.IBPluginDependency</string>
-					<string>119.IBPluginDependency</string>
 					<string>124.IBPluginDependency</string>
-					<string>130.IBPluginDependency</string>
-					<string>131.IBPluginDependency</string>
-					<string>140.IBPluginDependency</string>
-					<string>146.IBPluginDependency</string>
+					<string>178.IBPluginDependency</string>
+					<string>180.IBPluginDependency</string>
+					<string>186.IBPluginDependency</string>
 					<string>2.IBAttributePlaceholdersKey</string>
 					<string>2.IBEditorWindowLastContentRect</string>
 					<string>2.IBPluginDependency</string>
@@ -418,8 +383,6 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>LeechingViewController</string>
-					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -463,7 +426,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">160</int>
+			<int key="maxID">195</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
