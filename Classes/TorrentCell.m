@@ -19,7 +19,7 @@
 
         primaryLabel = [[UILabel alloc]init];
         primaryLabel.textAlignment = UITextAlignmentLeft;
-        primaryLabel.font = [UIFont systemFontOfSize:13];
+        primaryLabel.font = [UIFont boldSystemFontOfSize:13];
 
         secondaryLabel = [[UILabel alloc]init];
         secondaryLabel.textAlignment = UITextAlignmentLeft;
